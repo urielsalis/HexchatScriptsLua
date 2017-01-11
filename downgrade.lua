@@ -13,10 +13,11 @@ hexchat.hook_command("dg", function (words, word_eols)
 		version = 10
 		reqversion = arg1
 	end
+	local message
 	if(arg3) then
-		local message = "Unfortunately, your graphics card isnt supported on Windows "..version..". You will need to either downgrade to Windows "..reqversion..", get a new graphics card(If you have a desktop PC) or play in another PC"
+		message = "Unfortunately, your graphics card isnt supported on Windows "..version..". You will need to either downgrade to Windows "..reqversion..", get a new graphics card(If you have a desktop PC) or play in another PC"
     else
-		local message = "Unfortunately, your graphics card isnt supported on Windows "..version.." as Intel has not released drivers for your graphics card as its too old. You will need to either downgrade to Windows "..reqversion..", get a new graphics card(If you have a desktop PC) or play in another PC"		
+		message = "Unfortunately, your graphics card isnt supported on Windows "..version.." as Intel has not released drivers for your graphics card as its too old. You will need to either downgrade to Windows "..reqversion..", get a new graphics card(If you have a desktop PC) or play in another PC"		
 	end
 	local cmd = "say " .. user .. ": " .. message
     hexchat.command(cmd)
